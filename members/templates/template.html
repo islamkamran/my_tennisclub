@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="{% static 'myglobal.css' %}">
+<body>
+    
+
+    <!-- <h1>hello my name is {{ firstname }}</h1> -->
+    <!-- {% for x in fruits %}
+        <h1>{{ x }}</h1>
+    {% endfor %} -->
+
+    <!-- <p>In views.py you can see what the fruits variable looks like.</p> -->
+
+    <!-- we can also create variables in template itself -->
+    <!-- {% with name='Kamran' %}
+        <h2>hello {{ name }}! how are you?</h2>
+    {% endwith %} -->
+
+    <!-- {% for x in mymembers %} 
+            <li>{{ x.firstname }} {{ x.lastname }} {{ x.joining_date }}</li>
+    {% empty %}
+        <li>no members</li>
+   {% endfor %} -->
+
+    <!-- {% for x in fruit %} 
+        <li
+            {% if forloop.first %}
+                style = 'background-color:red;'
+            {% endif %}>
+            {{ x }}
+        </li>
+        
+   {% endfor %} -->
+
+   <!-- {% for x in fruit %} 
+       <li>{{ forloop.revcounter0 }}</li>  
+    {% endfor %}
+{% include 'footer.html' %} -->
+
+{% include "mymenu.html" with me='ISLAM' sponser='SCHOOL' %}
+
+<h1>Welcome</h1>
+
+<p>This is webpage</p>
+
+{% for x in fruits %}
+  <h1>{{ x }}</h1>
+{% endfor %}
+
+{% include 'footer.html' %} 
+
+
+</body>
+</html>
